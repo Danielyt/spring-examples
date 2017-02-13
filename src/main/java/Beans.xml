@@ -8,5 +8,8 @@
    <bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
        <property name="message" value="Hello World!"/>
    </bean>
+   
+   <bean id="singletonHelloWorld" class="com.tutorialspoint.HelloWorld">
+   </bean>
 
 </beans>
