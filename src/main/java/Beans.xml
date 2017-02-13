@@ -9,7 +9,8 @@
        <property name="message" value="Hello World!"/>
    </bean>
    
-   <bean id="singletonHelloWorld" class="com.tutorialspoint.HelloWorld">
-   </bean>
+   <bean id="singletonHelloWorld" class="com.tutorialspoint.HelloWorld"/>
+   
+   <bean id="prototypeHelloWorld" class="com.tutorialspoint.HelloWorld" scope="prototype"/>
 
-</beans> 
+</beans>
