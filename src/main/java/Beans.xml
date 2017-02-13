@@ -12,4 +12,4 @@
    <bean id="singletonHelloWorld" class="com.tutorialspoint.HelloWorld">
    </bean>
 
-</beans>
+</beans> 

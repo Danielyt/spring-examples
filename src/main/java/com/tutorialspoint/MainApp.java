@@ -19,5 +19,9 @@ public class MainApp {
       
       HelloWorld obj2 = (HelloWorld) context.getBean("singletonHelloWorld");
       obj2.getMessage();
+      obj2.setMessage("obj2 message");
+      
+      HelloWorld obj3 = (HelloWorld) context.getBean("singletonHelloWorld");
+      obj3.getMessage();
    }
 }
