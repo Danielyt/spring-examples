@@ -11,10 +11,10 @@ import org.springframework.core.io.ClassPathResource;
  * @author Drusev
  *
  */
+@SuppressWarnings("deprecation")
 public class MainAppWithXMLBeanFactory {
 	
 	public static void main(String[] args) {
-		@SuppressWarnings("deprecation")
 		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("Beans.xml"));
 		
 		HelloWorld obj = (HelloWorld) factory.getBean("helloWorld");
