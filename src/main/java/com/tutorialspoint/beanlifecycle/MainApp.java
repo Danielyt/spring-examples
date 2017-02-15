@@ -16,6 +16,7 @@ public class MainApp {
 		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml")) {
 			HelloWorld obj = (HelloWorld) context.getBean("lifeCycledHelloWorld");
 			obj.getMessage();
+			System.out.println(obj.getClass());
 			context.registerShutdownHook();
 		}
 	}

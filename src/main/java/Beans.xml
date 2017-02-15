@@ -18,4 +18,6 @@
 		init-method="init" destroy-method="xmlDefinedDestroy">
 		<property name="message" value="Hello World" />
 	</bean>
+	
+	<bean class="com.tutorialspoint.beanlifecycle.InitHelloWorld"/>
 </beans>
