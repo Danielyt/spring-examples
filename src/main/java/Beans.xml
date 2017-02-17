@@ -13,13 +13,6 @@
 
 	<bean id="prototypeHelloWorld" class="com.tutorialspoint.HelloWorld"
 		scope="prototype" />
-
-	<bean id="lifeCycledHelloWorld" class="com.tutorialspoint.beanlifecycle.HelloWorld"
-		init-method="init" destroy-method="xmlDefinedDestroy">
-		<property name="message" value="Hello World" />
-	</bean>
-	
-	<bean class="com.tutorialspoint.beanlifecycle.InitHelloWorld"/>
 	
 	<bean id="parentHelloWorld" class="com.tutorialspoint.beandefinitioninheritance.HelloWorld">
       <property name="message1" value="Hello World!"/>

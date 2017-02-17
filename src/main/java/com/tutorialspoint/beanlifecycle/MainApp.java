@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainApp {
 
 	public static void main(String[] args) {
-		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml")) {
+		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("BeansLifeCycle.xml")) {
 			HelloWorld obj = (HelloWorld) context.getBean("lifeCycledHelloWorld");
 			obj.getMessage();
 			System.out.println(obj.getClass());
