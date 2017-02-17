@@ -33,8 +33,13 @@
 
 	<!-- Definition for textEditor bean -->
 	<bean id="textEditorWithConstructor"
-		class="com.tutorialspoint.dependencyinjection.constructor.TextEditor">
+		class="com.tutorialspoint.dependencyinjection.TextEditorWithConstructor">
 		<constructor-arg ref="spellChecker" />
+	</bean>
+
+	<bean id="textEditorWithSetter"
+		class="com.tutorialspoint.dependencyinjection.TextEditorWithSetter">
+		<property name="spellChecker" ref="spellChecker" />
 	</bean>
 
 	<!-- Definition for spellChecker bean -->
