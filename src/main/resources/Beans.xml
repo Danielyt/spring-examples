@@ -45,4 +45,12 @@
 	<!-- Definition for spellChecker bean -->
 	<bean id="spellChecker" class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl">
 	</bean>
+
+	<bean id="textEditorWithInnerBean"
+		class="com.tutorialspoint.dependencyinjection.TextEditorWithSetter">
+		<property name="spellChecker">
+			<bean id="innerSpellChecker"
+				class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl" />
+		</property>
+	</bean>
 </beans>
