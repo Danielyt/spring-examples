@@ -98,4 +98,14 @@
 		</property>
 
 	</bean>
+	
+	<!-- Definition for textEditor bean -->
+   <bean id="textEditorByName" class="com.tutorialspoint.beansautowiring.TextEditorImpl" 
+      autowire="byName">
+      <property name="name" value="Generic Text Editor" />
+   </bean>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id="Checker" class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl">
+   </bean>
 </beans>
