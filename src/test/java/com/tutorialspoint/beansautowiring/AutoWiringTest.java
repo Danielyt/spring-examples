@@ -28,7 +28,7 @@ public class AutoWiringTest {
 	}
 
 	@Test
-	public void givenMultipleBeansOfSameType_UnsatisfiedDependencyExceptionIsThrown() {
+	public void givenMultipleBeansOfSameTypeWhenAutoWiringByType_UnsatisfiedDependencyExceptionIsThrown() {
 		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("TestBeansByType.xml")) {
 			fail();
 		} catch (UnsatisfiedDependencyException e) {
