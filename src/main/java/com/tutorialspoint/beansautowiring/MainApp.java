@@ -17,5 +17,9 @@ public class MainApp {
 			TextEditorImpl te = (TextEditorImpl) context.getBean("textEditorByName");
 			te.spellCheck();
 		}
+		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("BeansByType.xml")) {
+			TextEditorImpl te = (TextEditorImpl) context.getBean("textEditorByType");
+			te.spellCheck();
+		}
 	}
 }

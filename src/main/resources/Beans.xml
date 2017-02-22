@@ -106,6 +106,6 @@
    </bean>
 
    <!-- Definition for spellChecker bean -->
-   <bean id="Checker" class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl">
+   <bean id="checker" class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl">
    </bean>
 </beans>
