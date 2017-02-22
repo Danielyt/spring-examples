@@ -3,6 +3,7 @@
  */
 package com.tutorialspoint.beansautowiring;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -33,6 +34,31 @@ public class AutoWiringTest {
 			fail();
 		} catch (UnsatisfiedDependencyException e) {
 			assertTrue(e.getCause() instanceof NoUniqueBeanDefinitionException);
+		}
+	}
+
+	@Test
+	public void givenOneBeanOfAppropriateType_whenAutoWiringByConstructor_itIsInjected() {
+		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("TestBeansByConstructor1.xml")) {
+			TextEditorImpl textEditor = (TextEditorImpl) context.getBean("textEditorByConstructor");
+			assertNotNull(textEditor.getChecker());
+		}
+	}
+
+	@Test
+	public void givenTwoBeansOfAppropriateTypeWithoutMatchingNames_whenAutoWiringByConstructor_UnsatisfiedDependencyExceptionIsThrown() {
+		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("TestBeansByConstructor2.xml")) {
+			fail();
+		} catch (UnsatisfiedDependencyException e) {
+			assertTrue(e.getCause() instanceof NoUniqueBeanDefinitionException);
+		}
+	}
+
+	@Test
+	public void givenTwoBeansOfAppropriateTypeOneWithMatchingName_whenAutoWiringByConstructor_itIsInjected() {
+		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("TestBeansByConstructor3.xml")) {
+			TextEditorImpl textEditor = (TextEditorImpl) context.getBean("textEditorByConstructor");
+			assertNotNull(textEditor.getChecker());
 		}
 	}
 }

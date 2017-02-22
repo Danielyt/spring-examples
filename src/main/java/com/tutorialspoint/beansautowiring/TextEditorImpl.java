@@ -15,6 +15,14 @@ public class TextEditorImpl implements TextEditor {
 	private SpellChecker checker;
 	private String name;
 
+	public TextEditorImpl() {
+	}
+
+	public TextEditorImpl(final SpellChecker checker, final String name) {
+		this.checker = checker;
+		this.name = name;
+	}
+
 	public void setChecker(final SpellChecker checker) {
 		this.checker = checker;
 	}

@@ -98,14 +98,19 @@
 		</property>
 
 	</bean>
-	
-	<!-- Definition for textEditor bean -->
-   <bean id="textEditorByName" class="com.tutorialspoint.beansautowiring.TextEditorImpl" 
-      autowire="byName">
-      <property name="name" value="Generic Text Editor" />
-   </bean>
 
-   <!-- Definition for spellChecker bean -->
-   <bean id="checker" class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl">
-   </bean>
+	<!-- Definition for textEditor bean -->
+	<bean id="textEditorByName" class="com.tutorialspoint.beansautowiring.TextEditorImpl"
+		autowire="byName">
+		<property name="name" value="Generic Text Editor" />
+	</bean>
+
+	<!-- Definition for spellChecker bean -->
+	<bean id="checker" class="com.tutorialspoint.dependencyinjection.SpellCheckerImpl">
+	</bean>
+
+	<bean id="textEditorByConstructor" class="com.tutorialspoint.beansautowiring.TextEditorImpl"
+		autowire="constructor">
+		<constructor-arg value="Generic Text Editor" />
+	</bean>
 </beans>
