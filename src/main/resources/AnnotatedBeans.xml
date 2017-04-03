@@ -14,19 +14,33 @@
 		<property name="name" value="Zara" />
 		<property name="age" value="11" />
 	</bean>
-	
-	<bean id="autowiredStudent" class ="com.tutorialspoint.annotationbasedconfiguration.AutowiredStudent">
-		<property name="name" value="David"/>
+
+	<bean id="autowiredStudent"
+		class="com.tutorialspoint.annotationbasedconfiguration.AutowiredStudent">
+		<property name="name" value="David" />
 	</bean>
 
 	<!-- Definition for textEditor bean without constructor-arg -->
-	<bean id="textEditorWithSetter" class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithSetter"/>
-	
-	<bean id="textEditorWithProperty" class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithProperty"/>
-	
-	<bean id="textEditorWithConstructor" class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithConstructor"/>
+	<bean id="textEditorWithSetter"
+		class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithSetter" />
+
+	<bean id="textEditorWithProperty"
+		class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithProperty" />
+
+	<bean id="textEditorWithConstructor"
+		class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithConstructor" />
 
 	<!-- Definition for spellChecker bean -->
-	<bean id="spellChecker" class="com.tutorialspoint.annotationbasedconfiguration.SpellChecker"/>
+	<bean id="spellChecker"
+		class="com.tutorialspoint.annotationbasedconfiguration.SpellChecker" />
+
+	<!-- Definition for profile bean -->
+	<bean id="profile" class="com.tutorialspoint.annotationbasedconfiguration.Profile"/>
+
+	<!-- Definition for student2 bean -->
+	<bean id="student2" class="com.tutorialspoint.annotationbasedconfiguration.Student">
+		<property name="name" value="Nuha" />
+		<property name="age" value="2" />
+	</bean>
 
 </beans>
