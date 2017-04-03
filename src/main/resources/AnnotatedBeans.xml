@@ -30,17 +30,25 @@
 	<bean id="textEditorWithConstructor"
 		class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithConstructor" />
 
+	<bean id="textEditorWithResource"
+		class="com.tutorialspoint.annotationbasedconfiguration.TextEditorWithResource" />
+
 	<!-- Definition for spellChecker bean -->
 	<bean id="spellChecker"
 		class="com.tutorialspoint.annotationbasedconfiguration.SpellChecker" />
 
 	<!-- Definition for profile bean -->
-	<bean id="profile" class="com.tutorialspoint.annotationbasedconfiguration.Profile"/>
+	<bean id="profile" class="com.tutorialspoint.annotationbasedconfiguration.Profile" />
 
 	<!-- Definition for student2 bean -->
 	<bean id="student2" class="com.tutorialspoint.annotationbasedconfiguration.Student">
 		<property name="name" value="Nuha" />
 		<property name="age" value="2" />
+	</bean>
+
+	<bean id="helloWorld"
+		class="com.tutorialspoint.annotationbasedconfiguration.HelloWorld">
+		<property name="message" value="Hello World!" />
 	</bean>
 
 </beans>

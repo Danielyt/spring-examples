@@ -24,6 +24,10 @@ public class TextEditorMain {
 			TextEditorWithConstructor textEditorWithConstructor = (TextEditorWithConstructor) context
 					.getBean("textEditorWithConstructor");
 			textEditorWithConstructor.spellCheck();
+
+			TextEditorWithResource textEditorWithResource = (TextEditorWithResource) context
+					.getBean("textEditorWithResource");
+			textEditorWithResource.spellCheck();
 		}
 	}
 }
