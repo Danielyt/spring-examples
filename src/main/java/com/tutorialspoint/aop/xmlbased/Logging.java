@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.tutorialspoint.aop;
+package com.tutorialspoint.aop.xmlbased;
 
 /**
  * @author Drusev

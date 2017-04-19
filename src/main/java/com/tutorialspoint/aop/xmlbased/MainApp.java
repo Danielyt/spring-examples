@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.tutorialspoint.aop;
+package com.tutorialspoint.aop.xmlbased;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
