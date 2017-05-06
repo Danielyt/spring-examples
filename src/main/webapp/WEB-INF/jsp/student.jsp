@@ -5,6 +5,7 @@
    </head>
 
    <body>
+   	  <h1>Hello, ${person}</h1>
       <h2>Student Information</h2>
       <form:form method = "POST" action = "/spring-examples/Form/addStudent" modelAttribute="student">
          <table>

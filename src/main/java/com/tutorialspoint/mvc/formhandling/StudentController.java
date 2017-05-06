@@ -8,6 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -19,10 +20,14 @@ public class StudentController {
 
 	private Student student;
 
-	@RequestMapping(value = "/Form/student", method = RequestMethod.GET)
-	public ModelAndView student() {
+	// this method will be called only when there is a request parameter with
+	// name person
+	@RequestMapping(value = "/Form/student", method = RequestMethod.GET, params = "person")
+	public ModelAndView student(@RequestParam("person") String person) {
 		student = new Student();
-		return new ModelAndView("student", "student", student);
+		ModelAndView modelAndView = new ModelAndView("student", "student", student);
+		modelAndView.getModelMap().addAttribute("person", person);
+		return modelAndView;
 	}
 
 	@RequestMapping(value = "/Form/addStudent", method = RequestMethod.POST)
