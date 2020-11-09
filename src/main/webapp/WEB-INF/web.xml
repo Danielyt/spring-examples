@@ -22,10 +22,10 @@
       <load-on-startup>1</load-on-startup>
    </servlet>
 
-   <servlet-mapping>
+<!--    <servlet-mapping>
       <servlet-name>HelloWeb</servlet-name>
       <url-pattern>/</url-pattern>
-   </servlet-mapping>
+   </servlet-mapping> -->
    
    <servlet-mapping>
       <servlet-name>HelloWebForm</servlet-name>

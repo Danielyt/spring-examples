@@ -18,8 +18,12 @@
                <td><form:input path = "age" /></td>
             </tr>
             <tr>
-               <td><form:label path = "id">id</form:label></td>
+               <td><form:label path = "id">Id</form:label></td>
                <td><form:input path = "id" /></td>
+            </tr>
+            <tr>
+               <td><form:label path = "password">Password</form:label></td>
+               <td><form:password path = "password"/></td>
             </tr>
             <tr>
                <td colspan = "2">

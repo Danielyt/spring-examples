@@ -22,7 +22,7 @@ public class StudentController {
 
 	// this method will be called only when there is a request parameter with
 	// name person
-	@RequestMapping(value = "/Form/student", method = RequestMethod.GET, params = "person")
+	@RequestMapping(value = "/student", method = RequestMethod.GET, params = "person")
 	public ModelAndView student(@RequestParam("person") String person) {
 		student = new Student();
 		ModelAndView modelAndView = new ModelAndView("student", "student", student);
@@ -30,9 +30,12 @@ public class StudentController {
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/Form/addStudent", method = RequestMethod.POST)
-	public String addStudent(@ModelAttribute("student") Student student, ModelMap model) {
+	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
+	public String addStudent(@ModelAttribute("student") Student student, @RequestParam("age") String age,
+			ModelMap model, @RequestParam("password") String password) {
 		boolean flag = this.student == student;
+		System.out.println(age);
+		System.out.println(password);
 		System.out.println("Are they the same object: " + flag);
 		model.addAttribute("name", student.getName());
 		model.addAttribute("age", student.getAge());

@@ -36,4 +36,11 @@ public class Student {
 		return id;
 	}
 
+	public void setPassword(String password) {
+
+	}
+
+	public String getPassword() {
+		return "password";
+	}
 }
